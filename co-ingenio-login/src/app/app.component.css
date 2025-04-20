@@ -1,0 +1,36 @@
+.app-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  /* Ajusta el ancho para que no se solape con el sidebar fijo */
+  .main-content {
+    flex: 1;
+    margin-left: 250px;    /* → el mismo ancho que le pusiste al sidebar */
+    overflow-y: auto;
+    padding: 1rem;
+    background-color: #f5f8fa;
+  }
+  /* src/app/app.component.css */
+:host {
+  display: flex;
+  height: 100vh;
+}
+
+main.main-content {
+  flex: 1;
+  margin-left: 250px;  /* Ajusta según el ancho de tu sidebar */
+  overflow-y: auto;
+  padding: 1rem;
+  background-color: #f5f8fa;
+}
+
+app-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;  /* Ajusta al tamaño de tu sidebar */
+  height: 100%;
+  background-color: #343a40;
+  color: #fff;
+}

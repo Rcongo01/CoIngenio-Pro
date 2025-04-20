@@ -1,0 +1,36 @@
+<div class="layout">
+  <app-sidebar></app-sidebar>
+
+  <main class="content">
+    <h1>Bienvenido Administrador</h1>
+    <h2>Resumen General Co-Ingenio</h2>
+
+    <div class="summary">
+      <div>
+        <label>Proyectos Activos</label>
+        <input type="text" value="5" readonly>
+      </div>
+      <div>
+        <label>Porcentaje De Materiales</label>
+        <input type="text" value="40%" readonly>
+      </div>
+      <div>
+        <label>Tareas En Proceso</label>
+        <input type="text" value="12" readonly>
+      </div>
+    </div>
+
+    <div class="charts">
+      <div class="chart-box">
+        <h3>Distribución de Materiales</h3>
+        <canvas #materialChart></canvas>
+      </div>
+      <div class="chart-box">
+        <h3>Proyectos por Estado</h3>
+        <canvas #projectChart></canvas>
+      </div>
+    </div>
+
+    <a>Diríjase al menú para ver el detalle</a>
+  </main>
+</div>

@@ -1,0 +1,31 @@
+<div class="main-container">
+  <app-sidebar></app-sidebar>
+
+  <div class="content-with-sidebar">
+    <div class="content-inner">
+
+      <h2>Gestión De Materiales</h2>
+
+      <div class="acciones">
+        <button class="btn-anadir" (click)="anadirMaterial()">Añadir Material</button>
+        <input type="text" placeholder="Busque su material aquí" [(ngModel)]="busqueda" />
+      </div>
+
+      <div class="contenedor-stock">
+        <h3>Materiales En Stock</h3>
+        <div class="material" *ngFor="let material of materialesFiltrados()">
+          <span>{{ material.nombre }}</span>
+          <span class="estado" [ngClass]="{'alto': material.stock === 'Alto', 'bajo': material.stock === 'Bajo'}">
+            Stock {{ material.stock }}
+          </span>
+        </div>
+      </div>
+
+      <div class="acciones-secundarias">
+        <button class="btn-eliminar" (click)="eliminar()">Eliminar</button>
+        <button class="btn-detalle" (click)="verDetalle()">Detalle</button>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+/* Estructura de layout horizontal: sidebar + contenido */
+.main-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Asegura que el sidebar no colapse al ancho mínimo */
+app-sidebar {
+  width: 300px; /* Ajusta este valor si tu sidebar tiene otro ancho */
+  flex-shrink: 0;
+}
+
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+app-sidebar {
+  width: 250px;
+  background-color: #b0cdd9;
+  padding: 20px;
+  flex-shrink: 0;
+  height: 100vh;
+}
+.content-with-sidebar {
+  flex: 1;
+  background-color: #f8fafc;
+  padding: 60px 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+  .content-inner {
+    flex: 1;
+    width: 100%;
+  }
+
+  
+  h2 {
+    font-size: 28px;
+    color: #0f172a;
+  }
+  
+  .subtitulo {
+    font-size: 16px;
+    color: #64748b;
+    margin-bottom: 25px;
+  }
+  
+  .acciones {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  input {
+    padding: 10px;
+    width: 280px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    background-color: white;
+  }
+  
+  /* Botones */
+  .btn-crear,
+  .btn-eliminar,
+  .btn-detalle {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    color: white;
+  }
+  
+  .btn-crear {
+    background-color: #014f56;
+  }
+  
+  .btn-crear:hover {
+    background-color: #013f45;
+  }
+  
+  .btn-eliminar {
+    background-color: #b91c1c;
+  }
+  
+  .btn-eliminar:hover {
+    background-color: #991b1b;
+  }
+  
+  .btn-detalle {
+    background-color: #0f766e;
+  }
+  
+  .btn-detalle:hover {
+    background-color: #0d5f58;
+  }
+  
+  /* Tabla de proyectos */
+  .tabla-proyectos {
+    overflow-x: auto;
+    margin-bottom: 30px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #0f172a;
+    color: white;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  th, td {
+    padding: 15px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #1e293b;
+    font-weight: 600;
+  }
+  
+  tr:not(:last-child) {
+    border-bottom: 1px solid #334155;
+  }
+  
+  /* Tareas y calendario */
+  .detalle-tareas {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+  }
+  
+  .tareas-info {
+    flex: 1;
+  }
+  
+  .tarea {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .estado {
+    font-weight: 600;
+    color: #475569;
+  }
+  
+  .calendario img {
+    max-width: 200px;
+    border-radius: 12px;
+  }
+  

@@ -1,0 +1,46 @@
+<div class="layout">
+  <app-sidebar></app-sidebar> <!-- Barra lateral fuera del contenido principal -->
+
+  <div class="content-with-sidebar">
+    <div class="content-inner">
+      <h2>Cronograma Co-Ingenio</h2>
+      <p class="subtitulo">Seleccione un proyecto del cronograma para ver sus tareas</p>
+
+      <div class="acciones">
+        <button class="btn-crear" (click)="crearTarea()">Crear Tarea</button>
+        <input type="text" placeholder="Busque su proyecto o tarea aquí" [(ngModel)]="busqueda" />
+      </div>
+
+      <div class="tabla-proyectos">
+        <table>
+          <thead>
+            <tr>
+              <th>Proyecto</th>
+              <th>Categoría</th>
+              <th>Tareas</th>
+              <th>Activo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let proyecto of proyectosFiltrados()">
+              <td>{{ proyecto.nombre }}</td>
+              <td>{{ proyecto.categoria }}</td>
+              <td>{{ proyecto.tareas }} Tareas</td>
+              <td>{{ proyecto.activo ? 'Sí' : 'No' }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="detalle-tareas">
+        <div class="tareas-info">
+          <h3>Tareas {{ proyectoSeleccionado?.nombre }}</h3>
+          <div class="tarea" *ngFor="let tarea of tareas">
+            <span>{{ tarea.nombre }}</span>
+            <span class="estado">{{ tarea.estado }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

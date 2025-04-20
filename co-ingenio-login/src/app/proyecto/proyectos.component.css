@@ -1,0 +1,119 @@
+/* Sidebar fijo */
+app-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: #1e293b; /* azul oscuro */
+  color: white;
+  padding: 20px;
+  z-index: 1000;
+}
+
+/* Contenido con espacio al lado del sidebar */
+.content-with-sidebar {
+  margin-left: 250px;
+  padding: 40px;
+  background-color: #f8fafc;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Encabezado principal */
+h2 {
+  font-size: 28px;
+  color: #0f172a;
+  margin-bottom: 20px;
+}
+
+/* Barra de acciones */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+input {
+  padding: 10px;
+  width: 280px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background-color: white;
+}
+
+/* Tarjetas de proyectos */
+.lista-proyectos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.proyecto-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+.proyecto-card:hover {
+  transform: translateY(-4px);
+}
+
+.proyecto-nombre {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1e293b;
+  margin-bottom: 10px;
+}
+
+.estado {
+  font-size: 14px;
+  font-weight: 600;
+  color: #64748b;
+}
+
+/* Botones */
+.botones {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-crear {
+  background-color: #4895b4;
+  color: white;
+}
+
+.btn-crear:hover {
+  background-color: #a2c2cf;
+}
+
+.btn-eliminar {
+  background-color: #7bb7cf;
+  color: white;
+}
+
+.btn-eliminar:hover {
+  background-color: #7bb7cf;
+}
+
+.btn-detalle {
+  background-color: #7bb7cf;
+  color: white;
+}
+
+.btn-detalle:hover {
+  background-color: #7bb7cf;
+}

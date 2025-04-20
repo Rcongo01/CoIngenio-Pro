@@ -1,0 +1,22 @@
+<app-sidebar></app-sidebar>
+
+<div class="content-with-sidebar">
+  <h2>Gestión de Proyectos</h2>
+
+  <div class="actions">
+    <button class="btn-crear" (click)="crearProyecto()">Crear Proyecto</button>
+    <input type="text" placeholder="Busque su proyecto aquí" [(ngModel)]="busqueda" />
+  </div>
+
+  <div class="lista-proyectos">
+    <div *ngFor="let proyecto of proyectosFiltrados()" class="proyecto-card">
+      <div class="proyecto-nombre">{{ proyecto.nombre }}</div>
+      <div class="estado">Estado: {{ proyecto.estado }}</div>
+    </div>
+  </div>
+
+  <div class="botones">
+    <button class="btn-eliminar" (click)="eliminarProyecto()">Eliminar</button>
+    <button class="btn-detalle" (click)="irADetalle()">Detalle</button>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="login-container">
+  <div class="login-left">
+    <h2>Bienvenido a Co-Ingenio</h2>
+    <img src="assets/logo-coingenio .png" alt="Logo Co-Ingenio" class="logo">
+  </div>
+  <div class="login-right">
+    <form (ngSubmit)="iniciarSesion()">
+      <label for="username">Nombre de usuario</label>
+      <input id="username" type="text" [(ngModel)]="email" name="email" required>
+
+      <label for="password">Contraseña</label>
+      <input id="password" type="password" [(ngModel)]="password" name="password" required>
+
+      <button type="submit">Iniciar sesión</button>
+
+      <p *ngIf="mensaje">{{ mensaje }}</p>
+    </form>
+  </div>
+</div>
